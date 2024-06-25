@@ -1,11 +1,12 @@
 # 開關燈和溫溼度監控
 透過LED和溫溼度感測器，結合NodeMcu的WiFi功能的微控制器，達到簡易的遠端開關燈和溫溼度檢測。
 # 預覽畫面
-![image](https://github.com/strings143/IOT-web-open-light-and-Temperature-humidity/assets/73727207/d10e3436-5ea4-4bb2-a66b-eaa7bdf19f90)
+![image](https://github.com/strings143/Home-Monitoring-Web/assets/73727207/e41fc3e8-63e3-42e5-bacf-f2bcd46a3dd6)
 ### 開關燈 : 
-* ![](https://i.imgur.com/CSAJxx5.png)
+* ![image](https://github.com/strings143/Home-Monitoring-Web/assets/73727207/63daf340-3325-43e9-8e44-ab3e1c2cd427)
 ### 溫溼度 :
-* ![](https://i.imgur.com/Wi2RT4m.png)
+* ![image](https://github.com/strings143/Home-Monitoring-Web/assets/73727207/d927bba8-5b20-420f-adcc-244deafb728e)
+
 # 建置作業
 * **感測器**: **DHT11 、LED**
 * **WiFi模組**: **NodeMCU**
