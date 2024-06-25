@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css引用 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- js引用 -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+   
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top shadow">
+        <a class="navbar-brand ml-4" href="index.html"><span class="title"></span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-justifified">
+                <li class="nav-item">
+                    <a class="nav-link h5 mt-2 ml-2 active" href="index.html">Light</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h5 mt-2 ml-2" href="humtem.html">Humidity&Temperature</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card mr-2 col-12 col-lg-2 col-md-3 col-sm-3" style="width: 20rem;">
+                    <h3 class="card-title text-center my-auto ">Bathroom</h3>
+                    <span class="card-img-top " alt="Card image cap">
+                        <div class="text-center mt-2">
+                            <svg id='bulb1' xmlns="http://www.w3.org/2000/svg" width="150" height="150"
+                                fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </div>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text text-center mt-1">
+                            <label class="switch">
+                                <input type="checkbox" id="light1" onclick="check_bulb1()">
+                                <span class="slider round">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mr-2 col-12 col-lg-2 col-md-3 col-sm-3" style="width: 20rem;">
+                    <h3 class="card-title text-center my-auto ">Room</h3>
+                    <span class="card-img-top " alt="Card image cap">
+                        <div class="text-center mt-2">
+                            <svg id='bulb2' xmlns="http://www.w3.org/2000/svg" width="150" height="150"
+                                fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </div>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text text-center mt-1">
+                            <label class="switch">
+                                <input type="checkbox" id="light2" onclick="check_bulb2()">
+                                <span class="slider round">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mr-2 col-12 col-lg-2 col-md-3 col-sm-3" style="width: 20rem;">
+                    <h3 class="card-title text-center my-auto ">Stair</h3>
+                    <span class="card-img-top " alt="Card image cap">
+                        <div class="text-center mt-2">
+                            <svg id='bulb3' xmlns="http://www.w3.org/2000/svg" width="150" height="150"
+                                fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </div>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text text-center mt-1">
+                            <label class="switch">
+                                <input type="checkbox" id="light3" onclick="check_bulb3()">
+                                <span class="slider round">
+                            </label>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class=" border-bottom  bg-secondary text-light ">
+        <p class="text-center mt-1">Copyright &copy; 2022 IOT </p>
+    </div>
+</body>
+
+</html>

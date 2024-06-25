@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css引用 -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!-- js引用 -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top shadow ">
+    <a class="navbar-brand ml-4" href="index.html"><span class="title"></span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-justifified">
+        <li class="nav-item">
+          <a class="nav-link h5 mt-2 ml-2 " href="index.html">Light</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5 mt-2 ml-2 active" href="humtem.html">Humidity&Temperature</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="content" class="container-fluid text-center">
+    <div>
+      <p class="title_ht "><b>Humidity&Temperature</b></p>
+    </div>
+    <div class="space"></div>
+    <div class="container-fluid ">
+    <div class="row d-flex">   
+      <div class="square col-lg-12 col-12 d-flex justify-content-center">
+      <canvas class="mt-4" id="myChart"></canvas>
+      </div>
+   
+      
+    </div>
+  </div>
+</div>
+
+
+
+  <footer id="footer" class="border-bottom bg-secondary text-light ">
+    <p class="text-center mt-1">Copyright &copy; 2022 IOT </p>
+  </footer>
+
+
+
+
+</body>
+<script src="js/main.js"></script>
+
+</html>
